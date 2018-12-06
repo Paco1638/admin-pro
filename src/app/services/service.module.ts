@@ -1,23 +1,25 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { 
   SettingsService,
   SidebarService,
-  SharedService
+  SharedService,
+  UsuarioService
 } from "./service.index";
 
 @NgModule({
-  declarations: [],
-
+  imports: [
+    CommonModule,
+    HttpClientModule
+  ],
   providers: [
     SettingsService,
     SidebarService,
-    SharedService
+    SharedService,
+    UsuarioService
   ],
-
-  imports: [
-    CommonModule
-  ]
+  declarations: []
 })
 export class ServiceModule { }
