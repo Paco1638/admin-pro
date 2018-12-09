@@ -1,6 +1,9 @@
-export { LoginGuardGuard } from './guards/login-guard.guard';
-export { SubirArchivoService } from './subir-archivo/subir-archivo.service';
+export { MaquinaService } from './maquina/maquina.service';
+export { MantenimientoService } from './mantenimiento/mantenimiento.service';
 
+export { LoginGuardGuard } from './guards/login-guard.guard';
+
+export { SubirArchivoService } from './subir-archivo/subir-archivo.service';
 export { UsuarioService } from './usuario/usuario.service';
 export { SettingsService } from './settings/settings.service';
 export { SharedService } from './shared/shared.service';

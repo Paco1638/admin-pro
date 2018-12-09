@@ -5,7 +5,7 @@ import { UsuarioService } from 'src/app/services/service.index';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  styleUrls: []
 })
 export class ProfileComponent implements OnInit {
 

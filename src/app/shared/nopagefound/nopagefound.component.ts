@@ -5,7 +5,7 @@ declare function init_plugins();
 @Component({
   selector: 'app-nopagefound',
   templateUrl: './nopagefound.component.html',
-  styleUrls: ['./nopagefound.component.css']
+  styleUrls: []
 })
 export class NopagefoundComponent implements OnInit {
 

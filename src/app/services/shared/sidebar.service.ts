@@ -7,17 +7,6 @@ export class SidebarService {
 
   menu: any = [
     {
-      titulo: 'Principal',
-      icono: 'mdi mdi-gauge',
-      submenu: [
-        { titulo: 'Dashboard', url: '/dashboard' },
-        { titulo: 'ProgressBar', url: '/progress' },  
-        { titulo: 'Gráfiacas', url: '/graficas1' },
-        { titulo: 'Promesas', url: '/promesas' },
-        { titulo: 'RxJs', url: '/rxjs' }
-      ]
-    },
-    {
       titulo: 'M. Industrial',
       icono: 'mdi mdi-folder-lock-open',
       submenu: [
@@ -26,6 +15,17 @@ export class SidebarService {
         { titulo: 'Maquinas', url: '/maquinas' }
       ]
     }
+    // {
+    //   titulo: 'Principal',
+    //   icono: 'mdi mdi-gauge',
+    //   submenu: [
+    //     { titulo: 'Dashboard', url: '/dashboard' },
+    //     { titulo: 'ProgressBar', url: '/progress' },  
+    //     { titulo: 'Gráfiacas', url: '/graficas1' },
+    //     { titulo: 'Promesas', url: '/promesas' },
+    //     { titulo: 'RxJs', url: '/rxjs' }
+    //   ]
+    // }
   ];
 
   constructor() { }

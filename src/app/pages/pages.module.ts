@@ -29,7 +29,10 @@ import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
-
+import { MantenimientosComponent } from './mantenimientos/mantenimientos.component';
+import { MantenimientoComponent } from './mantenimientos/mantenimiento.component';
+import { MaquinasComponent } from './maquinas/maquinas.component';
+import { MaquinaComponent } from './maquinas/maquina.component';
 
 @NgModule({
     declarations: [
@@ -44,7 +47,11 @@ import { ModalUploadComponent } from '../components/modal-upload/modal-upload.co
         RxjsComponent,
         ProfileComponent,
         UsuariosComponent,
-        ModalUploadComponent
+        ModalUploadComponent,
+        MantenimientosComponent,
+        MantenimientoComponent,
+        MaquinasComponent,
+        MaquinaComponent
         
     ],
 

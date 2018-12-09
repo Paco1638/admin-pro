@@ -46,5 +46,4 @@ export class AccoutSettingsComponent implements OnInit {
       }
     }
   }
-
 }

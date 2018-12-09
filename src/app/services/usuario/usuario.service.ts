@@ -95,9 +95,9 @@ export class UsuarioService {
 
     const url = URL_SERVICIOS + '/usuario';
     return this.http.post(url, usuario)
-        .pipe(map((res: any) => {
+        .pipe(map((resp: any) => {
          swal('Usuario Creado', usuario.email, 'success');
-         return res.usuario;
+         return resp.usuario;
  
     }));
   }

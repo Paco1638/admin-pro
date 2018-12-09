@@ -1,0 +1,77 @@
+<div class="row animated fadeIn">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <input #input (keyup)="buscarMaquina( input.value )" type="text" class="form-control" placeholder="Buscar Maquina...">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row animated fadeIn">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="text-right">
+                    <button [routerLink]="['/maquina','nuevo']" type="button" class="btn waves-effect waves-light btn-rounded btn-primary">
+                    <i class="fa fa-plus"></i>
+                    Crear Maquina
+                  </button>
+                </div>
+
+                <h3 class="card-title">Maquinas registradas ( <small> {{ totalRegistros }} </small> )</h3>
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Usuario</th>
+                            <th>Nombre</th>
+                            <th>Placa Sena</th>
+                            <th>Marca</th>
+                            <th>Ambiente</th>
+                            <th>Aula</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr *ngFor="let maquina of maquinas">
+                            <td>
+                                <img [src]="maquina.img | imagen:'maquina'" class="img-50 img-circle">
+                            </td>
+                            <td> {{ maquina.usuario.nombre }} </td>
+                            <td> {{ maquina.nombre }} </td>
+                            <td> {{ maquina.placa_sena }} </td>
+                            <td> {{ maquina.marca }} </td>
+                            <td> {{ maquina.ambiente }} </td>
+                            <td> {{ maquina.aula }} </td>
+                            <td>
+                                <button [routerLink]="['/maquina', maquina._id ]" class="btn btn-primary">
+                                    <i class="fa fa-edit"></i>
+                                </button>
+
+                                <button (click)="borrarMaquina( maquina )" class="btn btn-danger">
+                                    <i class="fa fa-trash-o"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button (click)="cambiarDesde(-5)" class="btn btn-secondary">
+                    Anteriores
+                </button>
+
+
+                <button (click)="cambiarDesde(5)" class="btn btn-secondary">
+                    Siguientes
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>

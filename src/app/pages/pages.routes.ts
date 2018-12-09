@@ -12,6 +12,10 @@ import { ProfileComponent } from './profile/profile.component';
 
 // M. Industrial
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { MantenimientosComponent } from './mantenimientos/mantenimientos.component';
+import { MaquinasComponent } from './maquinas/maquinas.component';
+import { MaquinaComponent } from './maquinas/maquina.component';
+import { MantenimientoComponent } from './mantenimientos/mantenimiento.component';
 
 const pagesRoutes: Routes = [
     {
@@ -26,8 +30,13 @@ const pagesRoutes: Routes = [
             { path: 'rxjs', component: RxjsComponent, data: { titulo: 'RxJs' } },
             { path: 'account-settings', component: AccoutSettingsComponent, data: { titulo: 'Ajustes del Tema' } },
             { path: 'perfil', component: ProfileComponent, data: { titulo: 'Perfil de usuario' } },
+            
             // M. Industrial
             { path: 'usuarios', component: UsuariosComponent, data: { titulo: 'Usuarios' } },
+            { path: 'mantenimientos', component: MantenimientosComponent, data: { titulo: 'Mantenimiento' } },
+            { path: 'mantenimiento/:id', component: MantenimientoComponent, data: { titulo: 'Mantenimiento' } },
+            { path: 'maquinas', component: MaquinasComponent, data: { titulo: 'Maquinas' } },
+            { path: 'maquina/:id', component: MaquinaComponent, data: { titulo: 'Crear Maquina' } },
             { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 
         ]

@@ -1,0 +1,39 @@
+<div class="row animated fadeIn">
+
+    <div class="col-md-6">
+        <div class="card card-body">
+            <h3 class="box-title m-b-0">Crear Mantenimiento</h3><br>
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <form #f="ngForm" ngNativeValidate (ngSubmit)="guardarMantenimiento( f )">
+                        <div class="form-group">
+                            <label>Encargado</label>
+                            <input disabled="mantenimiento.usuario.nombre" [(ngModel)]="mantenimiento.usuario.nombre" name="nombre" required type="text" class="form-control" placeholder="Encargado">
+                        </div>
+                        <div class="form-group">
+                            <label>Maquina</label>
+                            <input [(ngModel)]="mantenimiento.maquina" name="maquina" required type="text" class="form-control" placeholder="Maquina">
+                        </div>
+                        <div class="form-group">
+                            <label>Pieza Dañada</label>
+                            <input [(ngModel)]="mantenimiento.pieza_danada" name="pieza_danada" required type="text" class="form-control" placeholder="Pieza Dañada">
+                        </div>
+                        <div class="form-group">
+                            <label>Pieza Reemplazada</label>
+                            <input [(ngModel)]="mantenimiento.pieza_reemplazada" name="pieza_reemplazada" required type="text" class="form-control" placeholder="Pieza Reemplazada">
+                        </div>
+                        <div class="form-group">
+                            <label>Descripcion</label>
+                            <input [(ngModel)]="mantenimiento.descripcion" name="descripcion" required type="text" class="form-control" placeholder="Descripcion">
+                        </div>
+                        <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">
+                          <i class="fa fa-save"></i>
+                          Guardar
+                        </button>
+                        <a routerLink="/mantenimientos" type="submit" class="btn btn-inverse waves-effect waves-light">Cancelar</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
