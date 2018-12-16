@@ -7,7 +7,7 @@ import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { AccoutSettingsComponent } from './accout-settings/accout-settings.component';
 
-import { LoginGuardGuard } from '../services/service.index';
+import { LoginGuardGuard, AdminGuardGuard } from '../services/service.index';
 import { ProfileComponent } from './profile/profile.component';
 
 // M. Industrial
@@ -16,6 +16,9 @@ import { MantenimientosComponent } from './mantenimientos/mantenimientos.compone
 import { MaquinasComponent } from './maquinas/maquinas.component';
 import { MaquinaComponent } from './maquinas/maquina.component';
 import { MantenimientoComponent } from './mantenimientos/mantenimiento.component';
+import { SolicitudComponent } from './solicitudes/solicitud.component';
+import { SolicitudesComponent } from './solicitudes/solicitudes.component';
+import { BusquedaComponent } from './busqueda/busqueda.component';
 
 const pagesRoutes: Routes = [
     {
@@ -30,13 +33,27 @@ const pagesRoutes: Routes = [
             { path: 'rxjs', component: RxjsComponent, data: { titulo: 'RxJs' } },
             { path: 'account-settings', component: AccoutSettingsComponent, data: { titulo: 'Ajustes del Tema' } },
             { path: 'perfil', component: ProfileComponent, data: { titulo: 'Perfil de usuario' } },
+            { path: 'busqueda/:termino', component: BusquedaComponent, data: { titulo: 'Buscador' } },
             
+            // =========================================================================================
             // M. Industrial
-            { path: 'usuarios', component: UsuariosComponent, data: { titulo: 'Usuarios' } },
+            // =========================================================================================
+            { 
+                path: 'usuarios', 
+                component: UsuariosComponent, 
+                canActivate: [ AdminGuardGuard ],
+                data: { titulo: 'Usuarios' } 
+            },
+
             { path: 'mantenimientos', component: MantenimientosComponent, data: { titulo: 'Mantenimiento' } },
             { path: 'mantenimiento/:id', component: MantenimientoComponent, data: { titulo: 'Mantenimiento' } },
+
             { path: 'maquinas', component: MaquinasComponent, data: { titulo: 'Maquinas' } },
             { path: 'maquina/:id', component: MaquinaComponent, data: { titulo: 'Crear Maquina' } },
+
+            { path: 'solicitudes', component: SolicitudesComponent, data: { titulo: 'Solicitudes' } },
+            { path: 'solicitud/:id', component: SolicitudComponent, data: { titulo: 'Crear Solicitud' } },
+            
             { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 
         ]

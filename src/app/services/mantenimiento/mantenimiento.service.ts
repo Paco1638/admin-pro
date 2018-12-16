@@ -73,12 +73,4 @@ export class MantenimientoService {
       }));
     }
   }
-
-
-
-
-
-
-
-
 }

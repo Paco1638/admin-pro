@@ -1,0 +1,35 @@
+<div class="row animated fadeIn">
+
+    <div class="col-md-6">
+        <div class="card card-body">
+            <h3 class="box-title m-b-0">Crear Solicitud</h3><br>
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <form #f="ngForm" ngNativeValidate (ngSubmit)="guardarSolicitud( f )"><br>
+                        <div class="form-group">
+                            <label>Nombre</label>
+                            <input [(ngModel)]="solicitud.nombre_maquina" name="nombre" required type="text" class="form-control" placeholder="Nombre de la maquina">
+                        </div>
+                        <div class="form-group">
+                            <label>Tipo Solicitud</label>
+                            <input [(ngModel)]="solicitud.tipo_solicitud" name="tipo_solicitud" required type="text" class="form-control" placeholder="Tipo de Solicitud">
+                        </div>
+                        <div class="form-group">
+                            <label>Ambiente</label>
+                            <input [(ngModel)]="solicitud.ambiente_solicitud" name="ambiente_solicitud" required type="text" class="form-control" placeholder="Tipo Ambiente">
+                        </div>
+                        <div class="form-group">
+                            <label>Fecha Solicitud</label>
+                            <input [(ngModel)]="solicitud.fecha_solicitud" name="fecha_solicitud" required type="text" class="form-control" placeholder="Fecha de la Solicitud">
+                        </div>
+                        <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">
+                          <i class="fa fa-save"></i>
+                          Guardar
+                        </button>
+                        <a routerLink="/solicitudes" type="submit" class="btn btn-inverse waves-effect waves-light">Cancelar</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

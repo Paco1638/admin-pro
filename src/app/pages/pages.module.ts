@@ -33,6 +33,10 @@ import { MantenimientosComponent } from './mantenimientos/mantenimientos.compone
 import { MantenimientoComponent } from './mantenimientos/mantenimiento.component';
 import { MaquinasComponent } from './maquinas/maquinas.component';
 import { MaquinaComponent } from './maquinas/maquina.component';
+import { SolicitudesComponent } from './solicitudes/solicitudes.component';
+import { SolicitudComponent } from './solicitudes/solicitud.component';
+
+import { BusquedaComponent } from './busqueda/busqueda.component';
 
 @NgModule({
     declarations: [
@@ -51,7 +55,10 @@ import { MaquinaComponent } from './maquinas/maquina.component';
         MantenimientosComponent,
         MantenimientoComponent,
         MaquinasComponent,
-        MaquinaComponent
+        MaquinaComponent,
+        SolicitudesComponent,
+        SolicitudComponent,
+        BusquedaComponent
         
     ],
 

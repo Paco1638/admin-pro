@@ -28,7 +28,6 @@
                     <thead>
                         <tr>
                             <th>Imagen</th>
-                            <th>Usuario</th>
                             <th>Nombre</th>
                             <th>Placa Sena</th>
                             <th>Marca</th>
@@ -43,9 +42,8 @@
                             <td>
                                 <img [src]="maquina.img | imagen:'maquina'" class="img-50 img-circle">
                             </td>
-                            <td> {{ maquina.usuario.nombre }} </td>
                             <td> {{ maquina.nombre }} </td>
-                            <td> {{ maquina.placa_sena }} </td>
+                            <td> {{ maquina.placasena }} </td>
                             <td> {{ maquina.marca }} </td>
                             <td> {{ maquina.ambiente }} </td>
                             <td> {{ maquina.aula }} </td>

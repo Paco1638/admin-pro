@@ -25,8 +25,17 @@
     height: 50px;
 }
 
+.img-alert {
+    width: 50px;
+    height: 40px;
+}
+
 .oculto {
     display: none;
+}
+
+.titleinicio {
+    font-size: 60px;
 }
 
 .fondo-negro {
